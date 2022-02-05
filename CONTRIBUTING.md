@@ -28,7 +28,7 @@ This section guides you through submitting a bug report for React Dropzone. Foll
 * Perform a [search](https://github.com/search?q=is%3Aissue+user%3Areact-dropzone) to see if the problem has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one.
 
 #### Submit an Issue
-If you've already been through the above checklist and you're certain there's an issue, then please go ahead and [create an issue](https://github.com/react-dropzone/react-dropzone/issues/new/choose) of type bug and provide the following information by filling in the template.
+If you've already been through the above checklist and you're certain there's an issue, then please go ahead and create an issue of type bug and provide the following information by filling in the template.
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 * Use a clear and descriptive title for the issue to identify the problem.
@@ -63,7 +63,7 @@ Before creating enhancement suggestions, please check [this list](#before-submit
 * Perform a [search](https://github.com/search?q=is%3Aissue+user%3Areact-dropzone) to see if the problem has already been reported. If it has and the issue is still open, add a comment to the existing issue instead of opening a new one.
 
 #### How Do I Submit An Enhancement Suggestion?
-[Create an issue](https://github.com/react-dropzone/react-dropzone/issues/new/choose) of type feature and provide the following information by filling in the template:
+Create an issue of type feature and provide the following information by filling in the template:
 * Use a clear and descriptive title for the issue to identify the suggestion.
 * Provide a step-by-step description of the suggested enhancement in as many details as possible.
 * Provide specific examples to demonstrate the steps. Provide a [codesandbox example](https://codesandbox.io/s/react-dropzone-example-jq6d5?file=/src/App.js) if possible, include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [markdown code blocks](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#quoting-code).
