@@ -33,14 +33,14 @@ If you've already been through the above checklist and you're certain there's an
 Explain the problem and include additional details to help maintainers reproduce the problem:
 * Use a clear and descriptive title for the issue to identify the problem.
 * Describe the exact steps which reproduce the problem in as many details as possible. When listing steps, don't just say what you did, but explain how you did it.
-* Provide specific examples to demonstrate the steps. Provide a [codesandbox example](https://codesandbox.io/s/react-dropzone-example-jq6d5?file=/src/App.js), include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [markdown code blocks](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#quoting-code).
+* Provide specific examples to demonstrate the steps. Provide a [codesandbox example](https://codesandbox.io/p/devbox/currying-thunder-jq6d5), include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [markdown code blocks](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#quoting-code).
 * Describe the behavior you observed after following the steps and point out what exactly is the problem with that behavior.
 * Explain which behavior you expected to see instead and why.
 * Include screenshots and animated GIFs which show you following the described steps and clearly demonstrate the problem.
 * If the problem wasn't triggered by a specific action, describe what you were doing before the problem happened and share more information using the guidelines below.
 
 Provide more context by answering these questions:
-* Can you reproduce the problem on https://react-dropzone.js.org/ or the [codesandbox example](https://codesandbox.io/s/react-dropzone-example-jq6d5?file=/src/App.js)?
+* Can you reproduce the problem on https://react-dropzone.js.org/ or the [codesandbox example](https://codesandbox.io/p/devbox/currying-thunder-jq6d5)?
 * Did the problem start happening recently (e.g. after updating to a new version) or was this always a problem?
 * If the problem started happening recently, can you reproduce the problem in an older version? What's the most recent version in which the problem doesn't happen?
 * Can you reliably reproduce the issue? If not, provide details about how often the problem happens and under which conditions it normally happens.
@@ -66,7 +66,7 @@ Before creating enhancement suggestions, please check [this list](#before-submit
 Create an issue of type feature and provide the following information by filling in the template:
 * Use a clear and descriptive title for the issue to identify the suggestion.
 * Provide a step-by-step description of the suggested enhancement in as many details as possible.
-* Provide specific examples to demonstrate the steps. Provide a [codesandbox example](https://codesandbox.io/s/react-dropzone-example-jq6d5?file=/src/App.js) if possible, include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [markdown code blocks](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#quoting-code).
+* Provide specific examples to demonstrate the steps. Provide a [codesandbox example](https://codesandbox.io/p/devbox/currying-thunder-jq6d5) if possible, include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [markdown code blocks](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#quoting-code).
 * Describe the current behavior and explain which behavior you expected to see instead and why.
 * Include screenshots and animated GIFs which show you following the described steps and clearly demonstrate the problem.
 * Explain why this enhancement would be useful to most users and isn't something that can or should be implemented as a community wrapper or plugin.
@@ -77,11 +77,29 @@ Unsure where to begin contributing to react-dropzpne? You can start by looking t
 
 #### Local Development
 To get started with fixing or enhancing [react-dropzone](https://github.com/react-dropzone/react-dropzone), you need to:
-1. Clone [react-dropzone](https://github.com/react-dropzone/react-dropzone.git) on your local workstation
-2. Install the dependencies with `yarn install`
-3. Run the dev server with `yarn start`
-4. Run the unit tests in watch mode with `yarn test:watch`
-5. Start hacking
+
+1. Clone a fork of [react-dropzone](https://github.com/react-dropzone/react-dropzone.git) (or any of the other repos) on your local workstation
+2. Install system dependencies (needed for local development):
+```bash
+# macOS
+brew install libpng libimagequant
+# Linux
+sudo apt-get install -y libpng-dev libimagequant-dev
+```
+3. Install project dependencies:
+```bash
+npm install
+```
+4. Run the dev server with `npm run start`
+5. Run the unit tests in watch mode with `npm run test:watch`
+6. Start hacking
+7. Commit and push your code
+8. Make a PR
+
+**NOTE** If you're using Apple silicon, you'll need to install Rosetta 2 (see [imagemin/pngquant-bin#121](https://github.com/imagemin/pngquant-bin/issues/121) and [SO](https://stackoverflow.com/a/66662497/1092007)):
+```bash
+/usr/sbin/softwareupdate --install-rosetta
+```
 
 ### Pull Requests
 Please follow these steps to have your contribution considered by the maintainers:
@@ -91,15 +109,15 @@ Please follow these steps to have your contribution considered by the maintainer
 3. After you submit your pull request, verify that all [status checks](https://help.github.com/articles/about-status-checks/) are passing
 
 ## Testing
-Make sure to test the changes you make locally before you submit a pull request. You can simply do that with a `yarn test` or `yarn test:cov`.
+Make sure to test the changes you make locally before you submit a pull request. You can simply do that with a `npm run test` or `npm run test:cov`.
 
 If you make significant changes (fix a bug, add a feature, etc), make sure that your code is covered (the rule of thumb is that coverage should be the same or higher). So add as many tests as necessary to ensure that whatever changes were made there's test cases to check the expected outcome.
 
 ## Styleguides
 
 ### Git Commit Messages
-* Please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) spec for your commit messages; this is also necessary for our auto release process to work correctly
-* If, during `yarn install`, the githooks were not setup properly, do run `yarn commitmsg` to ensure the correctness of you commit message
+* Please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) spec for your commit messages; this is also necessary for our auto release process to work correctly (see [semantic-release](https://github.com/semantic-release/semantic-release))
+* If, during `npm install`, the githooks were not setup properly, do run `npm run commitmsg` to ensure the correctness of you commit message
 * Use present tense; so `add awesome feature` instead of `adding awesome feature`
 * Use the imperative mood (e.g `add` instead of `adds`)
 * Reference the issues the commit is addressing, if there is an issue; see [linking a pull request to an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue)
@@ -108,10 +126,10 @@ If you make significant changes (fix a bug, add a feature, etc), make sure that 
 
 ### JavaScript Styleguide
 All JavaScript code is linted with [eslint](https://eslint.org/) and [prettier](https://prettier.io/).
-So just run `yarn lint:fix` to make sure the changes you made follow the styleguide.
+So just run `npm run lint:fix` to make sure the changes you made follow the styleguide.
 
 ### Specs Styleguide
-* Include thoughtfully-worded, well-structured [Jasmine](https://jasmine.github.io/)/[Jest](https://jestjs.io/) specs in the ./spec folder.
+* Include thoughtfully-worded, well-structured [Jasmine](https://jasmine.github.io/)/[Jest](https://jestjs.io/) tests.
 * Treat `describe` as a noun or situation.
 * Treat `it` as a statement about state or how an operation changes state.
 
