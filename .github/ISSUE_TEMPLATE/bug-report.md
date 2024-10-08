@@ -11,7 +11,7 @@ assignees: ''
 A clear and concise description of what the bug is.
 
 **To Reproduce**
-<!-- You can use https://codesandbox.io/s/react-dropzone-example-jq6d5?file=/src/App.js to get started and illustrate the issue you're experiencing. -->
+<!-- You can use https://codesandbox.io/p/devbox/currying-thunder-jq6d5 to get started and illustrate the issue you're experiencing. -->
 Steps to reproduce the behavior:
 1. Go to '...'
 2. Click on '....'
