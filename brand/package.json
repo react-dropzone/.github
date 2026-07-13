@@ -1,0 +1,12 @@
+{
+  "name": "@react-dropzone/brand",
+  "private": true,
+  "type": "module",
+  "description": "Canonical brand assets + generator for react-dropzone and file-selector.",
+  "scripts": { "build": "node generate.mjs" },
+  "dependencies": {
+    "opentype.js": "^1.3.4",
+    "@expo-google-fonts/hanken-grotesk": "^0.4.0",
+    "sharp": "^0.34.4"
+  }
+}
